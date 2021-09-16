@@ -5,12 +5,6 @@ import re
 
 #将目标文件读入，以列表形式返回，去除了符号
 def ReadFile(path):
-    #path为传入的c,cpp路径，这里取相对路径
-    # file_object=open(path,'r',encoding='utf-8')
-    # list_of_all_lines=file_object.read().splitlines()
-    # file_content=str(list_of_all_lines).replace(" ","")
-    # file_object.close()
-    # return file_content
     fp=open(path,'r',encoding='utf-8')
     #通过正则化原文本内容，去除所有符号
     punc = '~`!#$%^&*()_+-=|\';":/.,?><~·！@#￥%……&*（）——+-=“：’；、。，？》《{}'
@@ -18,7 +12,7 @@ def ReadFile(path):
     #文本通过换行符分割
     c=file_content.split('\n')
     return c
-
+#处理去除符号过文本以实现用空格分割
 def SplitTxtByBlank(file_content):
     key_list=[]
     for single_line in file_content:
