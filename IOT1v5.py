@@ -24,32 +24,6 @@ def SplitTxtByBlank(file_content):
         #key_list.append(single_word)
     return key_list
 
-
-
-'''
-#返回文本中题目要求的关键词组成的列表（该关键词并非标准C或CPP关键词）
-def GetKey(file_content):
-    list_dest = []
-    for i in file_content:
-        if 'else if' in i:
-            list_dest.append('else if')
-        elif 'if' in i:
-            list_dest.append('if')
-        elif 'else' in i:
-            list_dest.append('else')
-        elif 'switch' in i:
-            list_dest.append('switch')
-        elif 'case' in i:
-            list_dest.append('case')
-        elif 'break' in i:
-            list_dest.append('break')
-        elif 'default' in i:
-            list_dest.append('default')
-        elif 'return' in i:
-            list_dest.append('return')
-    return list_dest
-'''
-
 #输入读入的文件，输出提取了swich,if，else,else if组成的列表
 def GetExtractKeyList(file_content):
     list_dest = []
@@ -86,7 +60,7 @@ def CountStdCKey(key_list):
     return num_key
 
 
-
+#统计case有多少
 def CountCase(Extracted_Key_list):
     if(Extracted_Key_list.count('switch')):
         num_case=[]
