@@ -1,4 +1,4 @@
-#import os
+
 import sys
 import re
 
@@ -26,12 +26,7 @@ def SplitTxtByBlank(file_content):
 
 
 
-
-
-
-
-
-
+'''
 #返回文本中题目要求的关键词组成的列表（该关键词并非标准C或CPP关键词）
 def GetKey(file_content):
     list_dest = []
@@ -53,6 +48,9 @@ def GetKey(file_content):
         elif 'return' in i:
             list_dest.append('return')
     return list_dest
+'''
+
+
 def GetExtractKeyList(file_content):
     list_dest = []
     for i in file_content:
