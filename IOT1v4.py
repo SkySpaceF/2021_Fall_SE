@@ -50,7 +50,7 @@ def GetKey(file_content):
     return list_dest
 '''
 
-
+#输入读入的文件，输出提取了swich,if，else,else if组成的列表
 def GetExtractKeyList(file_content):
     list_dest = []
     for i in file_content:
@@ -66,6 +66,8 @@ def GetExtractKeyList(file_content):
             list_dest.append('case')
     return list_dest
 
+
+#将关键字列表中的C标准关键字统计出来
 def CountStdCKey(key_list):
     std_CKey=['else if','char','double','enum','float','int','long',
               'short','signed','struct','union','unsigned',
