@@ -8,11 +8,6 @@ import re
 #将目标文件读入
 def ReadFile(path):
 
-    # file_object=open(path,'r',encoding='utf-8')
-    # list_of_all_lines=file_object.read().splitlines()
-    # file_content=str(list_of_all_lines).replace(" ","")
-    # file_object.close()
-    # return file_content
     fp=open(path,'r',encoding='utf-8')
     punc = '~`!#$%^&*()_+-=|\';":/.,?><~·！@#￥%……&*（）——+-=“：’；、。，？》《'
     file_content=re.sub(r"[%s]+" %punc, " ",fp.read())
@@ -77,7 +72,7 @@ def GetExtractKeyList(file_content):
         elif 'case' in i:
             list_dest.append('case')
     return list_dest
-
+#尝试在保留大括号的同时提取关键词
 def NGetExtractKeyList(file_content):
     list_dest = []
     for i in file_content:
